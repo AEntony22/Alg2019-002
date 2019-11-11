@@ -2,6 +2,12 @@
 #include <stdio.h>
 #include <math.h>
 //Кубанов Антон, Урок2
+void solution1();
+void solution2();
+void solution3();
+void menu();
+
+
 int bin(int dec) {
 	if (dec > 0) {
 		int temp = (bin(dec /= 2)) * 10 + dec % 2;
@@ -10,10 +16,58 @@ int bin(int dec) {
 	else return 0;
 
 }
-int main(void) {  
-	int n = 16;
-	printf("%d perevod v BIN %d\n", n, (bin(n) * 10) + n % 2);  // не понял, как в рекурсию добавить первое деление
-	system("pause");
+int main(void) {
+	int sel = 0;
+	do
+	{
+		menu();
+		scanf("%i", &sel);
+		switch (sel)
+		{
+		case 1:
+			solution1();
+			break;
+		case 2:
+			solution2();
+			break;
+		case 3:
+			solution3();
+			break;
+		case 0:
+			printf("Bye-bye");
+			break;
+		default:
+			printf("Wrong selected\n");
+		}
+	} while (sel != 0);
 	return 0;
-
 }
+
+	void solution1()
+	{
+		//1. Реализовать функцию перевода из 10 системы в двоичную используя рекурсию.
+		printf("Solution 1\n");
+		int n = 16;
+		printf("%d perevod v BIN %d\n", n, (bin(n) * 10) + n % 2);  // не понял, как в рекурсию добавить первое деление
+	}
+
+	void solution2()
+	{
+		printf("Solution 2\n");
+		// Решение
+	}
+	void solution3()
+	{
+		printf("Solution 3\n");
+		// Решение
+	}
+	
+	void menu()
+	{
+		printf("----------------------------------\n");
+		printf("1 - task1 10 to 2\n");
+		printf("2 - task2\n");
+		printf("3 - task3\n");
+		printf("0 - exit\n");
+		printf("----------------------------------\n");
+	}
