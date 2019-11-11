@@ -1,7 +1,7 @@
 ﻿#define _CRT_SECURE_NO_WARNINGS
 #include <stdio.h>
 #include <math.h>
-//Кубанов Антон, Урок2
+//Кубанов Антон , Урок2
 void solution1();
 int bin(int dec) {
 	if (dec > 0) {
